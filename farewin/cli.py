@@ -2,14 +2,15 @@ from __future__ import annotations
 
 import argparse
 import sys
-from datetime import date, time
+from datetime import date, time, timedelta
 
 from . import __version__, report
-from .model import Family, FarewinError, Fees, Limits
+from .google import Google
+from .model import Family, FarewinError, Fees, Limits, Window
 from .ryanair import Ryanair
-from .search import build_trips
+from .search import compose, from_round_trips, merge, rank
 
-PROVIDERS = {"ryanair": Ryanair}
+PROVIDERS = {"ryanair": Ryanair, "google": Google}
 
 
 def _date(value: str) -> date:
@@ -59,6 +60,9 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--include", type=_date, help="a date the trip must span, e.g. 2026-12-25")
     s.add_argument("--not-before", type=_time, help="flag departures earlier than HH:MM")
     s.add_argument("--not-after", type=_time, help="flag arrivals later than HH:MM (or next day)")
+    s.add_argument("--max-stops", type=int, help="flag itineraries with more stops than this")
+    s.add_argument("--direct", action="store_true", help="same as --max-stops 0")
+    s.add_argument("--max-layover", type=float, help="flag layovers longer than this many hours")
     s.add_argument("--strict", action="store_true", help="drop flagged combos instead of marking them")
     s.add_argument("--top", type=int, default=10)
     s.add_argument("--currency", default="EUR")
@@ -70,10 +74,24 @@ def build_parser() -> argparse.ArgumentParser:
         help="reserved seat per adult per leg, applied when children travel (default 0: random allocation is free)",
     )
     s.add_argument("--bag-fee", type=float, default=Fees.bag, help="per 20kg checked bag per leg (default 25)")
-    s.add_argument("--provider", choices=sorted(PROVIDERS), default="ryanair")
+    s.add_argument("--provider", choices=["ryanair", "google", "all"], default="ryanair")
+    s.add_argument("--max-queries", type=int, default=100, help="cap on Google Flights page fetches (default 100)")
+    s.add_argument("--refresh", action="store_true", help="ignore the Google Flights cache")
     s.add_argument("--json", dest="as_json", action="store_true", help="emit JSON")
     s.set_defaults(func=search)
     return parser
+
+
+def date_pairs(window: Window) -> list[tuple[date, date]]:
+    pairs = []
+    out_day = window.start
+    while out_day <= window.end:
+        for nights in range(window.min_nights, window.max_nights + 1):
+            back_day = out_day + timedelta(days=nights)
+            if window.accepts(out_day, back_day):
+                pairs.append((out_day, back_day))
+        out_day += timedelta(days=1)
+    return pairs
 
 
 def search(args: argparse.Namespace) -> int:
@@ -89,41 +107,88 @@ def search(args: argparse.Namespace) -> int:
 
     family = Family(args.adults, args.children, args.infants, args.bags)
     fees = Fees(args.infant_fee, args.seat_fee, args.bag_fee)
-    limits = Limits(args.not_before, args.not_after)
+    max_stops = 0 if args.direct else args.max_stops
+    max_layover = int(args.max_layover * 60) if args.max_layover is not None else None
+    limits = Limits(args.not_before, args.not_after, max_stops, max_layover)
     min_nights, max_nights = args.nights
+    window = Window(args.start, args.end, min_nights, max_nights, args.include)
+    sources = ["ryanair", "google"] if args.provider == "all" else [args.provider]
 
-    provider = PROVIDERS[args.provider]()
-    provider.check_route(orig, dest)
-    outbound = provider.fares(orig, dest, args.start, args.end, args.currency)
-    inbound = provider.fares(dest, orig, args.start, args.end, args.currency)
-    if not outbound:
-        raise FarewinError(f"no {orig}-{dest} flights between {args.start} and {args.end}")
-    if not inbound:
-        raise FarewinError(f"no {dest}-{orig} flights between {args.start} and {args.end}")
+    trips = []
+    extra_notes = []
+    stats = {}
+    if "ryanair" in sources:
+        ryanair = PROVIDERS["ryanair"]()
+        ryanair.check_route(orig, dest)
+        outbound = ryanair.fares(orig, dest, args.start, args.end, args.currency)
+        inbound = ryanair.fares(dest, orig, args.start, args.end, args.currency)
+        if len(sources) == 1:
+            if not outbound:
+                raise FarewinError(f"no {orig}-{dest} flights between {args.start} and {args.end}")
+            if not inbound:
+                raise FarewinError(f"no {dest}-{orig} flights between {args.start} and {args.end}")
+        trips = compose(outbound, inbound, window, family, fees, limits, "ryanair")
+        stats["ryanair"] = {"outbound_days": len(outbound), "inbound_days": len(inbound), "combos": len(trips)}
+    if "google" in sources:
+        google = PROVIDERS["google"](max_queries=args.max_queries, refresh=args.refresh)
+        google.check_route(orig, dest)
+        pairs = date_pairs(window)
+        round_trips = google.round_trips(orig, dest, pairs, family, args.currency)
+        found = from_round_trips(round_trips, window, family, fees, limits, "google")
+        outcome = google.outcome
+        stats["google"] = {
+            "date_pairs": len(pairs),
+            "queried": outcome.queried,
+            "cached": outcome.cached,
+            "seconds": outcome.seconds,
+            "pairs_without_flights": outcome.empty,
+            "skipped": outcome.errors,
+            "itineraries": len(found),
+        }
+        extra_notes.append(
+            f"google: {len(pairs)} date pairs, {outcome.queried} fetched in {outcome.seconds}s, "
+            f"{outcome.cached} from cache, {outcome.empty} with no flights, {len(outcome.errors)} skipped."
+        )
+        for error in outcome.errors:
+            extra_notes.append(f"google skipped {error}")
+        if trips:
+            trips, dropped = merge(trips, found)
+            if dropped:
+                extra_notes.append(
+                    f"{dropped} Google itineraries were the same Ryanair flights; the Ryanair rows are kept "
+                    f"because they carry the return leg's times."
+                )
+        else:
+            trips = found
 
-    trips = build_trips(
-        outbound, inbound, args.start, args.end, min_nights, max_nights, family, fees, limits, args.include
-    )
+    trips = rank(trips)
     if args.strict:
         trips = [t for t in trips if not t.flags]
     if not trips:
-        raise FarewinError("no round trips match the window, nights and time limits")
+        raise FarewinError("no round trips match the window, nights and limits")
 
-    currency = outbound[0].currency or args.currency
+    currency = args.currency.upper()
+    note_lines = report.notes(trips, currency, family, fees, sources, extra_notes)
     if args.as_json:
-        route = {"provider": provider.name, "origin": orig, "destination": dest}
-        window = {
+        route = {"origin": orig, "destination": dest}
+        window_json = {
             "from": args.start.isoformat(),
             "to": args.end.isoformat(),
             "nights": [min_nights, max_nights],
             "include": args.include.isoformat() if args.include else None,
             "not_before": args.not_before.isoformat("minutes") if args.not_before else None,
             "not_after": args.not_after.isoformat("minutes") if args.not_after else None,
+            "max_stops": max_stops,
+            "max_layover_minutes": max_layover,
             "strict": args.strict,
         }
-        print(report.render_json(trips, currency, family, fees, args.top, route, window))
+        print(
+            report.render_json(
+                trips, args.top, sources, note_lines, currency, family, fees, route, window_json, stats
+            )
+        )
     else:
-        print(report.render_table(trips, currency, family, fees, args.top))
+        print(report.render_table(trips, args.top, sources, note_lines))
     return 0
 
 

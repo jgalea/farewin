@@ -7,7 +7,7 @@ import urllib.request
 from collections.abc import Callable
 from datetime import date, datetime, timedelta
 
-from .model import Fare, FarewinError
+from .model import FarewinError, Leg
 
 NAME = "ryanair"
 FARES_URL = (
@@ -48,28 +48,27 @@ def months_between(start: date, end: date) -> list[date]:
     return months
 
 
-def parse_month(payload: object, orig: str, dest: str) -> list[Fare]:
+def parse_month(payload: object) -> list[Leg]:
     if not isinstance(payload, dict) or "outbound" not in payload:
         raise FarewinError("unexpected fare-finder response shape (no 'outbound' key)")
-    fares = []
+    legs = []
     for row in payload["outbound"].get("fares", []):
         price = row.get("price")
         if not price or row.get("unavailable") or row.get("soldOut"):
             continue
         if not row.get("departureDate") or not row.get("arrivalDate"):
             continue
-        fares.append(
-            Fare(
+        legs.append(
+            Leg(
                 day=date.fromisoformat(row["day"]),
                 departure=datetime.fromisoformat(row["departureDate"]),
                 arrival=datetime.fromisoformat(row["arrivalDate"]),
+                airlines=("Ryanair",),
+                stops=0,
                 price=float(price["value"]),
-                currency=price.get("currencyCode", ""),
-                origin=orig,
-                destination=dest,
             )
         )
-    return fares
+    return legs
 
 
 class Ryanair:
@@ -92,9 +91,9 @@ class Ryanair:
         if dest not in served:
             raise FarewinError(f"Ryanair doesn't fly {orig}-{dest}")
 
-    def fares(self, orig: str, dest: str, start: date, end: date, currency: str) -> list[Fare]:
+    def fares(self, orig: str, dest: str, start: date, end: date, currency: str) -> list[Leg]:
         found = []
         for month in months_between(start, end):
             url = FARES_URL.format(orig=orig, dest=dest, month=month.isoformat(), currency=currency)
-            found.extend(parse_month(self.fetch(url), orig, dest))
+            found.extend(parse_month(self.fetch(url)))
         return [f for f in found if start <= f.day <= end]

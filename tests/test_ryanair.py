@@ -12,16 +12,16 @@ from .conftest import FIXTURES
 def test_parse_month_keeps_only_priced_days():
     payload = json.loads((FIXTURES / "ryanair_LIS_MLA_2026-12.json").read_text())
     assert len(payload["outbound"]["fares"]) == 31
-    fares = parse_month(payload, "LIS", "MLA")
-    assert len(fares) == 21
-    assert {f.day.day for f in fares}.isdisjoint({5, 7, 12, 14, 19, 21, 24, 25, 26, 28})
-    first = fares[0]
+    legs = parse_month(payload)
+    assert len(legs) == 21
+    assert {f.day.day for f in legs}.isdisjoint({5, 7, 12, 14, 19, 21, 24, 25, 26, 28})
+    first = legs[0]
     assert first.day == date(2026, 12, 1)
     assert first.departure == datetime(2026, 12, 1, 13, 30)
     assert first.arrival == datetime(2026, 12, 1, 17, 40)
     assert first.price == 37.99
-    assert first.currency == "EUR"
-    assert (first.origin, first.destination) == ("LIS", "MLA")
+    assert first.airlines == ("Ryanair",)
+    assert first.stops == 0
 
 
 def test_parse_month_drops_sold_out_and_unavailable():
@@ -37,13 +37,12 @@ def test_parse_month_drops_sold_out_and_unavailable():
             ]
         }
     }
-    fares = parse_month(payload, "A", "B")
-    assert [f.day.day for f in fares] == [3]
+    assert [f.day.day for f in parse_month(payload)] == [3]
 
 
 def test_parse_month_rejects_wrong_shape():
     with pytest.raises(FarewinError):
-        parse_month({"fares": []}, "A", "B")
+        parse_month({"fares": []})
 
 
 def test_months_between_spans_year_end():
@@ -54,21 +53,19 @@ def test_months_between_spans_year_end():
     ]
 
 
-def test_fares_fetches_each_month_and_trims_to_window(provider, calls):
-    fares = provider.fares("LIS", "MLA", date(2026, 12, 11), date(2027, 1, 3), "EUR")
+def test_fares_fetches_each_month_and_trims_to_window(ryanair, calls):
+    legs = ryanair.fares("LIS", "MLA", date(2026, 12, 11), date(2027, 1, 3), "EUR")
     months = sorted(c.split("outboundMonthOfDate=")[1][:7] for c in calls)
     assert months == ["2026-12", "2027-01"]
-    assert all(date(2026, 12, 11) <= f.day <= date(2027, 1, 3) for f in fares)
-    assert fares[0].day == date(2026, 12, 11)
-    assert fares[-1].day == date(2027, 1, 3)
-    assert [f.day.day for f in fares] == [11, 13, 15, 16, 17, 18, 20, 22, 23, 27, 29, 30, 31, 1, 3]
+    assert all(date(2026, 12, 11) <= f.day <= date(2027, 1, 3) for f in legs)
+    assert [f.day.day for f in legs] == [11, 13, 15, 16, 17, 18, 20, 22, 23, 27, 29, 30, 31, 1, 3]
 
 
-def test_check_route_errors_are_specific(provider):
+def test_check_route_errors_are_specific(ryanair):
     with pytest.raises(FarewinError, match="three-letter"):
-        provider.check_route("LISBON", "MLA")
+        ryanair.check_route("LISBON", "MLA")
     with pytest.raises(FarewinError, match="isn't an airport Ryanair"):
-        provider.check_route("LIS", "ZZZ")
+        ryanair.check_route("LIS", "ZZZ")
     with pytest.raises(FarewinError, match="doesn't fly LIS-JFK"):
-        provider.check_route("LIS", "JFK")
-    provider.check_route("LIS", "MLA")
+        ryanair.check_route("LIS", "JFK")
+    ryanair.check_route("LIS", "MLA")

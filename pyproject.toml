@@ -1,11 +1,14 @@
 [project]
 name = "farewin"
-version = "0.1.0"
+version = "0.2.0"
 description = "Rank round-trip date combos by what the whole family pays, not the per-person headline fare"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [{ name = "Jean Galea" }]
-dependencies = []
+dependencies = [
+    "fast-flights>=3.1.0,<4",
+    "typing_extensions>=4.0",
+]
 
 [project.scripts]
 farewin = "farewin.cli:main"

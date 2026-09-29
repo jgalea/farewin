@@ -1,0 +1,2484 @@
+{
+ "2026-12-18/2026-12-31": [
+  {
+   "price": 241,
+   "airlines": [
+    "Ryanair"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      5,
+      55
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      10,
+      5
+     ],
+     "duration": 190
+    }
+   ]
+  },
+  {
+   "price": 1321,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      18,
+      12,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      16,
+      40
+     ],
+     "duration": 195
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1333,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      18,
+      6,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      10,
+      10
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      11,
+      10
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      13,
+      30
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1333,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      18,
+      14,
+      20
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      18,
+      25
+     ],
+     "duration": 185
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1344,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      18,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1392,
+   "airlines": [
+    "Brussels Airlines",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "BRU",
+     "departure": [
+      2026,
+      12,
+      18,
+      13,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      17,
+      30
+     ],
+     "duration": 170
+    },
+    {
+     "from": "BRU",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      20,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      23,
+      20
+     ],
+     "duration": 175
+    }
+   ]
+  },
+  {
+   "price": 1406,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      18,
+      8,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      12,
+      40
+     ],
+     "duration": 175
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      18,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  }
+ ],
+ "2026-12-22/2026-12-31": [
+  {
+   "price": 369,
+   "airlines": [
+    "Ryanair"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      22,
+      13,
+      30
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      17,
+      40
+     ],
+     "duration": 190
+    }
+   ]
+  },
+  {
+   "price": 1321,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      22,
+      12,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      16,
+      40
+     ],
+     "duration": 195
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      22,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1327,
+   "airlines": [
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      22,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      22,
+      10,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      13,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  },
+  {
+   "price": 1333,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      22,
+      14,
+      20
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      18,
+      25
+     ],
+     "duration": 185
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      22,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1392,
+   "airlines": [
+    "Brussels Airlines",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "BRU",
+     "departure": [
+      2026,
+      12,
+      22,
+      13,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      17,
+      30
+     ],
+     "duration": 170
+    },
+    {
+     "from": "BRU",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      22,
+      20,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      23,
+      20
+     ],
+     "duration": 175
+    }
+   ]
+  },
+  {
+   "price": 1514,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      22,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      22,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      22,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  }
+ ],
+ "2026-12-23/2026-12-31": [
+  {
+   "price": 277,
+   "airlines": [
+    "Ryanair"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      23,
+      19,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      23,
+      45
+     ],
+     "duration": 190
+    }
+   ]
+  },
+  {
+   "price": 690,
+   "airlines": [
+    "Vueling"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "BCN",
+     "departure": [
+      2026,
+      12,
+      23,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      20,
+      35
+     ],
+     "duration": 115
+    },
+    {
+     "from": "BCN",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      7,
+      20
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      9,
+      30
+     ],
+     "duration": 130
+    }
+   ]
+  },
+  {
+   "price": 1232,
+   "airlines": [
+    "SWISS"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      23,
+      15,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      19,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      6,
+      55
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      9,
+      10
+     ],
+     "duration": 135
+    }
+   ]
+  },
+  {
+   "price": 1321,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      23,
+      7,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      11,
+      55
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      23,
+      12,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      15,
+      10
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1333,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      23,
+      6,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      10,
+      10
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      23,
+      11,
+      10
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      13,
+      30
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1418,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      23,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      23,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1589,
+   "airlines": [
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      23,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      23,
+      10,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      23,
+      13,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  }
+ ],
+ "2026-12-17/2026-12-30": [
+  {
+   "price": 336,
+   "airlines": [
+    "Ryanair"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      20,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      18,
+      0,
+      25
+     ],
+     "duration": 190
+    }
+   ]
+  },
+  {
+   "price": 1285,
+   "airlines": [
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      17,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      10,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      13,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  },
+  {
+   "price": 1379,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      17,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1353,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      17,
+      12,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      16,
+      40
+     ],
+     "duration": 195
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1365,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      17,
+      14,
+      20
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      18,
+      25
+     ],
+     "duration": 185
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1435,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "BRU",
+     "departure": [
+      2026,
+      12,
+      17,
+      13,
+      10
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      17,
+      5
+     ],
+     "duration": 175
+    },
+    {
+     "from": "BRU",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      20,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      23,
+      20
+     ],
+     "duration": 175
+    }
+   ]
+  },
+  {
+   "price": 1441,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      17,
+      8,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      12,
+      40
+     ],
+     "duration": 175
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1447,
+   "airlines": [
+    "Brussels Airlines",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "BRU",
+     "departure": [
+      2026,
+      12,
+      17,
+      13,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      17,
+      30
+     ],
+     "duration": 170
+    },
+    {
+     "from": "BRU",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      17,
+      20,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      17,
+      23,
+      20
+     ],
+     "duration": 175
+    }
+   ]
+  }
+ ],
+ "2026-12-20/2026-12-31": [
+  {
+   "price": 337,
+   "airlines": [
+    "Ryanair"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      20,
+      6,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      11,
+      0
+     ],
+     "duration": 190
+    }
+   ]
+  },
+  {
+   "price": 718,
+   "airlines": [
+    "Vueling"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "BCN",
+     "departure": [
+      2026,
+      12,
+      20,
+      21,
+      5
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      23,
+      59
+     ],
+     "duration": 114
+    },
+    {
+     "from": "BCN",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      21,
+      11,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      21,
+      13,
+      35
+     ],
+     "duration": 130
+    }
+   ]
+  },
+  {
+   "price": 1327,
+   "airlines": [
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      20,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      20,
+      13,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      16,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  },
+  {
+   "price": 1406,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      20,
+      8,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      12,
+      40
+     ],
+     "duration": 175
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      20,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1418,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      20,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      20,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1499,
+   "airlines": [
+    "Tap Air Portugal",
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      20,
+      7,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      11,
+      55
+     ],
+     "duration": 195
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      20,
+      15,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      17,
+      35
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1531,
+   "airlines": [
+    "Tap Air Portugal",
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      20,
+      8,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      12,
+      30
+     ],
+     "duration": 195
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      20,
+      13,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      20,
+      16,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  }
+ ],
+ "2026-12-24/2027-01-02": [
+  {
+   "price": 1921,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      24,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 2202,
+   "airlines": [
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      24,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      10,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      13,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  },
+  {
+   "price": 2257,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "VIE",
+     "departure": [
+      2026,
+      12,
+      24,
+      7,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      11,
+      35
+     ],
+     "duration": 215
+    },
+    {
+     "from": "VIE",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      14,
+      55
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1820,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      24,
+      7,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      11,
+      55
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      16,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      19,
+      10
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1832,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      24,
+      6,
+      5
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      10,
+      15
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      16,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      19,
+      10
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1907,
+   "airlines": [
+    "Turkish Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "IST",
+     "departure": [
+      2026,
+      12,
+      24,
+      6,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      13,
+      50
+     ],
+     "duration": 290
+    },
+    {
+     "from": "IST",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      18,
+      20
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      18,
+      55
+     ],
+     "duration": 155
+    }
+   ]
+  },
+  {
+   "price": 1983,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      24,
+      8,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      12,
+      40
+     ],
+     "duration": 175
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1997,
+   "airlines": [
+    "Tap Air Portugal",
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      24,
+      8,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      12,
+      30
+     ],
+     "duration": 195
+    },
+    {
+     "from": "FRA",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      24,
+      15,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      16,
+      10
+     ],
+     "duration": 55
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      16,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      19,
+      10
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1997,
+   "airlines": [
+    "Tap Air Portugal",
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      24,
+      8,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      12,
+      30
+     ],
+     "duration": 195
+    },
+    {
+     "from": "FRA",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      24,
+      13,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      14,
+      10
+     ],
+     "duration": 55
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      16,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      19,
+      10
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 2186,
+   "airlines": [
+    "Lufthansa",
+    "Austrian",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      24,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "VIE",
+     "departure": [
+      2026,
+      12,
+      24,
+      10,
+      20
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      11,
+      45
+     ],
+     "duration": 85
+    },
+    {
+     "from": "VIE",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      14,
+      55
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 2431,
+   "airlines": [
+    "Turkish Airlines",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "IST",
+     "departure": [
+      2026,
+      12,
+      24,
+      11,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      19,
+      25
+     ],
+     "duration": 290
+    },
+    {
+     "from": "IST",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      22,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      23,
+      25
+     ],
+     "duration": 160
+    }
+   ]
+  },
+  {
+   "price": 2684,
+   "airlines": [
+    "KLM",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "AMS",
+     "departure": [
+      2026,
+      12,
+      24,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "AMS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      24,
+      11,
+      30
+     ],
+     "arrival": [
+      2026,
+      12,
+      24,
+      14,
+      40
+     ],
+     "duration": 190
+    }
+   ]
+  }
+ ],
+ "2026-12-16/2026-12-29": [
+  {
+   "price": 360,
+   "airlines": [
+    "Ryanair"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      19,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      23,
+      45
+     ],
+     "duration": 190
+    }
+   ]
+  },
+  {
+   "price": 1397,
+   "airlines": [
+    "Lufthansa"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "FRA",
+     "departure": [
+      2026,
+      12,
+      16,
+      5,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      9,
+      0
+     ],
+     "duration": 180
+    },
+    {
+     "from": "FRA",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      10,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      13,
+      0
+     ],
+     "duration": 155
+    }
+   ]
+  },
+  {
+   "price": 1412,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      16,
+      7,
+      45
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      11,
+      55
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      12,
+      50
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      15,
+      10
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1412,
+   "airlines": [
+    "Tap Air Portugal",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      16,
+      12,
+      25
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      16,
+      40
+     ],
+     "duration": 195
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1424,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      16,
+      6,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      10,
+      10
+     ],
+     "duration": 190
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      11,
+      10
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      13,
+      30
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1424,
+   "airlines": [
+    "Lufthansa",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "MUC",
+     "departure": [
+      2026,
+      12,
+      16,
+      14,
+      15
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      18,
+      20
+     ],
+     "duration": 185
+    },
+    {
+     "from": "MUC",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      20,
+      0
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      22,
+      20
+     ],
+     "duration": 140
+    }
+   ]
+  },
+  {
+   "price": 1491,
+   "airlines": [
+    "SWISS",
+    "KM Malta Airlines"
+   ],
+   "segments": [
+    {
+     "from": "LIS",
+     "to": "ZRH",
+     "departure": [
+      2026,
+      12,
+      16,
+      12,
+      35
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      16,
+      25
+     ],
+     "duration": 170
+    },
+    {
+     "from": "ZRH",
+     "to": "MLA",
+     "departure": [
+      2026,
+      12,
+      16,
+      17,
+      40
+     ],
+     "arrival": [
+      2026,
+      12,
+      16,
+      20,
+      0
+     ],
+     "duration": 140
+    }
+   ]
+  }
+ ]
+}
